@@ -1,0 +1,392 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;700;900&family=Raleway:wght@400;700;900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Cairo+Play:wght@700&family=Raleway:wght@400;700;900&display=swap');
+
+:root {
+    --primary: #141414;
+    --primary-text: #DDD;
+    --secondary-text: #141414;
+    --accent: #E53A35;
+    --accent-secondary: #E6241E; 
+    scroll-behavior: smooth;/* 2B70B2 */
+}
+
+.container-full-width {
+    min-width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/*
+ *
+ * Overriding default values from skeleton.css
+ *
+*/
+
+body {
+    font-family: 'Raleway', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    overflow-x:hidden;
+    font-size: 2.5vh;
+}
+
+h1, h2, h3, h4, h5, h6, .brand {
+    font-weight: bold;
+    font-family: 'Cairo Play', 'Raleway', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+
+section:target {
+    scroll-margin-top: 15vh;
+}
+
+/*
+ *
+ * GENERAL STYLES
+ *
+*/
+
+.section_title {
+    z-index: 900;
+    font-size: 20vh;
+    text-decoration: underline var(--accent);
+    text-underline-offset: -22.5vh;
+}
+
+/*
+ *
+ * PARALLAX ELEMENTS
+ *
+*/
+
+.blob-left, .blob-centre, .blob-right {
+    position: absolute;
+    z-index: 1000;
+    width: 60vh;
+    padding: 3vh;
+}
+
+.blob-left {
+    width: 60vh;
+    content: url("/img/deco/blob-left.png");
+}
+
+.blob-centre {
+    z-index: 700;
+    right: 70vh;
+    width: 25vh;
+    content: url("/img/deco/blob-centre.png");
+}
+
+.blob-right {
+    right: 0;
+    content: url("/img/deco/blob-right.png");
+}
+
+.titanic {
+    position: absolute;
+    z-index: 550;
+    top: 14%;
+    right: -120vh;
+    width: 120vh;
+    content: url("/img/deco/titanic.png");
+    animation: sink 60s forwards;
+}
+
+@keyframes sink {
+
+    0% {
+        filter: saturate(100%);
+        top: 14%;
+        right: -120vw;
+        transform: rotateZ(0);
+    }
+    40% {
+        filter: saturate(100%);
+        top: 14%;
+        right: 30vw;
+        transform: rotateZ(0);
+    }
+    70% {
+        filter: saturate(3%);
+        top: 17%;
+        right: 27vw;
+        transform: rotateZ(75deg);
+    }
+    85% {
+        filter: saturate(3%);
+        transform: rotateZ(90deg);
+        right: 30vw;
+        top: 40%;
+    }
+    100% {
+        filter: saturate(0%);
+        transform: rotateZ(-10deg);
+        right: 30vw;
+        top: 90%;
+    }
+
+    
+    
+    
+    /* 
+
+    from {
+        right: -120vw
+    } 
+    to {
+        right: 125vw;
+    } */
+    
+}
+
+/*
+ * 
+ * NAVIGATION
+ *
+*/
+
+.navigation {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 12vh;
+    z-index: 2000;
+    background: var(--primary);
+    padding: 0 25vh;
+    box-shadow: 0 0 10vh var(--primary);
+}
+
+.navigation a {
+    text-decoration: none;
+    color: var(--primary-text);
+}
+
+.brand {
+    font-size: 5vh !important;
+    display: block;
+    font-size: xx-large;
+}
+
+#navbar-dropdown {
+    display: none;
+}
+
+.menu {
+    position: fixed;
+    right: 10%;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 3vh;
+}
+
+.menu-item,
+.clean-li-item {
+    list-style-type: none;
+}
+
+.menu-item {
+    font-size: 2.75vh;
+    padding: 2vh;
+    align-self: center;
+    margin: 0;
+}
+
+.menu-item:hover a {
+    text-decoration: overline solid var(--accent);
+    text-decoration-thickness: .4vh;
+    transition: text-decoration .25s;
+
+}
+
+/*
+ *
+ * LANDING
+ *
+*/
+
+.landing {
+/*     background: 
+        url("/img/landing-front.svg"),
+        url("/img/landing-mid.svg"),
+        url("/img/landing-back.svg"); */
+    position: relative;
+    background-size: cover;
+    background-position: bottom;
+    height: 100vh;
+}
+
+
+.landing_layer-back,
+.landing_layer-middle,
+.landing_layer-front {
+    position: absolute;
+    top: -35%;
+    height: 100%;
+    width: 100%;
+}
+
+
+.landing_layer-back {
+    z-index: 500;
+    content: url("/img/landing-back.svg");
+}
+.landing_layer-middle {
+    z-index: 600;
+    content: url("/img/landing-mid.svg");
+}
+
+.landing_layer-front {
+    z-index: 700;
+    content: url("/img/landing-front.svg");
+    
+}
+
+.landing_content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.landing_title {
+    z-index: 500;
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+    font-size: 8vh;
+}
+
+.landing_description {
+    position: relative;
+    z-index: 150;
+    overflow: hidden;
+    font-size: 3vh;
+    text-align: center;
+    max-height: 4.5vh;
+}
+
+/*
+ *
+ * ABOUT
+ *
+*/
+
+.about {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background: #505c8f;
+    background-size: cover;
+    min-height: 100vh;
+    color: var(--primary-text);
+    padding: 10vh 0;
+}
+
+.about_mission {
+    font-size: 15vh;
+}
+
+/*
+ *
+ * SERVICES
+ *
+*/
+
+#services {
+    background: #001220;
+}
+
+.services {
+    background: url("/img/services.svg");
+    background-size: cover;
+    min-height: 100vh;
+}
+
+/*
+ *
+ * CARDS
+ *
+*/
+
+.container-expanded {
+    width: 100%;
+    max-width: 90vw;
+}
+
+
+.card_icon {
+    position: fixed;
+    right: 30%;
+    top: 10%;
+    font-size: 6vh;
+}
+
+.card_icon-consultancy::before {
+    font: var(--fa-font-solid);
+    content: '\f508';
+}
+
+.card_icon-programming::before {
+    font: var(--fa-font-solid);
+    content: '\f121';
+}
+
+.card_icon-hosting::before {
+    font: var(--fa-font-solid);
+    content: '\f233';
+}
+
+.card_container {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 60vh;
+    max-width: 70vh;
+    gap: 3vh;
+    padding: 2vh;
+    border-radius: 5rem;
+    background: url("img/deco/blob-centre.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: none;
+    /* 
+    background: var(--primary-text); */
+}
+
+.card_title {
+    position: fixed;
+    top: 25%;
+    font-family: "Cairo Play";
+    font-size: 6vh;
+    font-weight: bold;
+}
+
+.card_description {
+    position: fixed;
+    top: 46%;
+    font-family: sans-serif;
+    max-width: 75%;
+    text-align: justify;
+}
+
+.card .button {
+    position: fixed;
+    left: 16%;
+    top: 70%;
+    width: 272px;
+    max-width: 272px;
+} 
+
+#hosting-plans {
+    background: url("/img/landing-portrait.svg");
+    background-size: cover;
+}

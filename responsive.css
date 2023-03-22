@@ -1,0 +1,116 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    /* 
+    .landing {
+        background: url("/img/landing-portrait.svg");
+    }
+ */
+/* 
+    .landing_content {
+        background-color: #16161D85;
+    } */
+
+    #about {
+        margin: -.2vh;
+    }
+
+    .navigation {
+        display: flex;
+        min-width: 100%;
+        padding: 0;
+        gap: 0;
+    }
+    
+    .brand {
+        position: fixed;
+        left: 10%;
+    }
+
+    .icon::before {
+        display: inline-block;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-family: "Font Awesome 6 Free";
+    }
+
+    #navbar-dropdown {
+        position: fixed;
+        font-size: 3rem;
+        min-width: 2vh;
+        right: 10%;
+        display: block;
+        color: var(--primary-text);
+    }
+
+    #navbar-dropdown::before {
+        font: var(--fa-font-solid);
+        content: '\f0c9';
+    }
+
+    #navbar-dropdown[open]::before {
+        font: var(--fa-font-solid);
+        content: "\f00d";
+    }
+
+    .menu {
+        flex-direction: column;
+        position: fixed;
+        overflow-y: hidden;
+        top: 12vh;
+        right: 0;
+        background: var(--primary);
+        width: 100%;
+        font-size: 2.2rem;
+        text-align: center;
+        max-height: 0;
+    }
+
+    .menu[show] {
+        display: flex;
+        max-height: 100%;
+        transition: max-height .5s;
+    }
+
+    .menu[hide] {
+        display: flex;
+        max-height: 0;
+        transition: max-height .5s;
+    }
+    
+
+    .landing_title {
+        font-size: 6rem;
+    }
+
+    .landing_description {
+        padding: 2vw;
+        font-size: 2vw;
+        max-height: 3vw;
+        font-size: 4vw;
+    }
+
+    /**
+    CARDS
+    **/
+    .card_container {
+        flex-direction: column;
+        align-content: center;
+        min-height: 60vh;
+    }
+
+    .card .button {
+        min-width: 60vw;
+    } 
+
+    .blob {
+        width: 60vw;
+    }
+
+    .blob-2 {
+        width: 50vw;
+    }
+
+    .blob-3 {
+        width: 35vw;
+    }
+}

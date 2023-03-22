@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glaciar Software</title>
+    <link rel="stylesheet" href="utils/reset.css">
+    <link rel="stylesheet" href="utils/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+    <link rel="stylesheet" href="utils/skeleton.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="animation.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="navigation">
+
+            <a href="#home" class="brand">Glaciar Software</a>
+
+            <span onclick="dropdown()" class="icon" id="navbar-dropdown"></span>
+
+            <ul id="navbar" class="menu preload" hide>
+                <li class="menu-item"><a href="#home">Inicio</a></li>
+                <li class="menu-item"><a href="#about">Nosotros</a></li>
+                <li class="menu-item"><a href="#services">Servicios</a></li>
+                <li class="menu-item"><a href="#contact">Contacto</a></li>
+            </ul>
+            <span onclick="language('es')" class="icon icon_language-es"></span>
+
+        </div>
+    </nav>
+
+    <div id="main-container" class="container container-full-width">
+
+        <section id="home">
+            <div class="landing">
+
+                <div class="landing_content">
+                    <h1 class="landing_title">
+                        Glaciar Software
+                    </h1>
+
+                    <div class="landing_description">
+                        <ul id="roll-me">
+                            <li class="clean-li-item"><span> 👑 Desarrollos con tecnología de vanduardia</span></li>
+                            <li class="clean-li-item"><span> 🚀 Propulsamos tu negocio hacia la Web 3.0</span></li>
+                            <li class="clean-li-item"><span> 👇 Navegá nuestra página para descubrir más</span></li>
+                        </ul>
+                    </div>
+                       
+                </div>
+            </div>
+
+        </section>
+
+        <section id="about">
+
+            <div class="container container-expanded">
+
+                <h2>Nosotros</h2>
+
+            </div>
+
+        </section>
+
+        <section id="services">
+
+            <div class="container container-expanded">
+                <h2>Servicios</h2>
+
+                <div class="row card_container">
+                    <ul class="four columns card">
+                        <li class="clean-li-item card_icon card_icon-consultancy"></li>
+                        <li class="clean-li-item card_title">Análisis</li>
+                        <li class="card_description clean-li-item">
+                            Realizamos el análisis funcional de tu proyecto de software
+                            para que puedas tomar las mejores decisiones.
+                        </li>
+                        <li class="clean-li-item">
+                            <a class="button button-primary" href="#">Conocé más</a>
+                        </li>
+                    </ul>
+
+                    <ul class="four columns card">
+                        <li class="clean-li-item card_icon card_icon-programming"></li>
+                        <li class="clean-li-item card_title">Desarrollo</li>
+                        <li class="card_description clean-li-item">
+                            Diseñados y desarrollamos tu proyecto de forma integra
+                            con las últimas tecnologías a un precio razonable.
+                        </li>
+                        <li class="clean-li-item">
+                            <a class="button button-primary" href="#">Solicitá un presupuesto</a>
+                        </li>
+                    </ul>
+
+                    <ul class="four columns card">
+                        <li class="clean-li-item card_icon card_icon-hosting"></li>
+                        <li class="clean-li-item card_title">Hosting</li>
+                        <li class="card_description clean-li-item">
+                            Nos encargamos de los detalles de implantación 
+                            de tu proyecto para garantizar escalabilidad y rendimiento.
+                        </li>
+                        <li class="clean-li-item">
+                            <a class="button button-primary" href="#">Ver planes</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section id="contact">
+
+            <div class="container container-expanded">
+            <h2>Contactanos</h2>
+
+                <form action="#">
+                    <div class="row">
+                      <div class="six columns">
+                        <label for="exampleEmailInput">Your email</label>
+                        <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
+                      </div>
+                      <div class="six columns">
+                        <label for="exampleRecipientInput">Reason for contacting</label>
+                        <select class="u-full-width" id="exampleRecipientInput">
+                          <option value="Option 1">Questions</option>
+                          <option value="Option 2">Admiration</option>
+                          <option value="Option 3">Can I get your number?</option>
+                        </select>
+                      </div>
+                    </div>
+                    <label for="exampleMessage">Message</label>
+                    <textarea class="u-full-width" placeholder="Hi Dave …" id="exampleMessage"></textarea>
+                    <label class="example-send-yourself-copy">
+                      <input type="checkbox">
+                      <span class="label-body">Send a copy to yourself</span>
+                    </label>
+                    <input class="button-primary" type="submit" value="Submit">
+                  </form>
+            </div>
+
+          
+
+        </section>
+
+
+    </div>
+
+
+    <script src="utils/parallax.js"></script>
+    <script src="behaviour.js"></script>
+</body>
+
+</html>
