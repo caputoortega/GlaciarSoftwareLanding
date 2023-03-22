@@ -105,7 +105,7 @@ section:target {
         right: 30vw;
         transform: rotateZ(0);
     }
-    70% {
+    60% {
         filter: saturate(3%);
         top: 17%;
         right: 27vw;
@@ -121,7 +121,7 @@ section:target {
         filter: saturate(0%);
         transform: rotateZ(-10deg);
         right: 30vw;
-        top: 90%;
+        top: 100%;
     }
 
     
