@@ -12,9 +12,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"
     />
     <link rel="stylesheet" href="utils/skeleton.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="responsive.css" />
-    <link rel="stylesheet" href="animation.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
   </head>
 
   <body>
@@ -36,7 +35,7 @@
     <main>
       <div id="main-container" class="container container-full-width">
         <section id="home">
-<!--           <img width="600px" class="titanic" /> -->
+          <img width="600px" class="titanic" />
           <img class="landing_layer-back parallax" data-rellax-speed="12" />
           <img class="landing_layer-middle parallax" data-rellax-speed="4.5" />
           <img class="landing_layer-front" data-rellax-speed="-1" />
@@ -144,35 +143,35 @@
 
         <section id="contact">
           <div class="container container-expanded">
-            <h2>Contactanos</h2>
+            <h2>Contact us</h2>
 
             <form action="#">
               <div class="row">
                 <div class="six columns">
-                  <label for="exampleEmailInput">Your email</label>
+                  <label for="email">Your email</label>
                   <input
                     class="u-full-width"
                     type="email"
-                    placeholder="test@mailbox.com"
-                    id="exampleEmailInput"
+                    placeholder="your@email.com"
+                    id="email"
                   />
                 </div>
                 <div class="six columns">
-                  <label for="exampleRecipientInput"
+                  <label for="recipient"
                     >Reason for contacting</label
                   >
-                  <select class="u-full-width" id="exampleRecipientInput">
+                  <select class="u-full-width" id="recipient">
                     <option value="Option 1">Questions</option>
                     <option value="Option 2">Admiration</option>
                     <option value="Option 3">Can I get your number?</option>
                   </select>
                 </div>
               </div>
-              <label for="exampleMessage">Message</label>
+              <label for="message">Message</label>
               <textarea
                 class="u-full-width"
-                placeholder="Hi Dave …"
-                id="exampleMessage"
+                placeholder="Hi there!"
+                id="message"
               ></textarea>
               <label class="example-send-yourself-copy">
                 <input type="checkbox" />
@@ -185,6 +184,6 @@
       </div>
     </main>
     <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
-    <script src="behaviour.js"></script>
+    <script src="scripts/behaviour.js"></script>
   </body>
 </html>

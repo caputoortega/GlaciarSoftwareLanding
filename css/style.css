@@ -111,7 +111,7 @@ section:target {
         right: 27vw;
         transform: rotateZ(75deg);
     }
-    85% {
+    75% {
         filter: saturate(3%);
         transform: rotateZ(90deg);
         right: 30vw;
