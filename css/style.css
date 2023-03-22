@@ -354,7 +354,7 @@ section:target {
     gap: 3vh;
     padding: 2vh;
     border-radius: 5rem;
-    background: url("img/deco/blob-centre.png");
+    background: url("/img/deco/blob-centre.png");
     background-size: 100% 100%;
     background-position: center;
     background-repeat: none;
